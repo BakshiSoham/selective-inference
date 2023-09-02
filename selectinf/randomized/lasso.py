@@ -1,20 +1,17 @@
 from __future__ import print_function
-import functools
-from copy import copy
 
 import numpy as np
 from scipy.stats import norm as ndist
 
 import regreg.api as rr
 
-from ..algorithms.sqrt_lasso import solve_sqrt_lasso, choose_lambda
-
 from .query import gaussian_query
-
 from .randomization import randomization
-from ..base import restricted_estimator
 from ..algorithms.debiased_lasso import (debiasing_matrix,
                                          pseudoinverse_debiasing_matrix)
+from ..algorithms.sqrt_lasso import solve_sqrt_lasso
+from ..base import restricted_estimator
+
 
 #### High dimensional version
 #### - parametric covariance
