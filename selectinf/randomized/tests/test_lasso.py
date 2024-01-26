@@ -1,14 +1,13 @@
 from __future__ import division, print_function
 
 import numpy as np
-import nose.tools as nt
 
 import regreg.api as rr
 
 from ..lasso import lasso, selected_targets, full_targets, debiased_targets
 from ...tests.instance import gaussian_instance
 from ...tests.flags import SET_SEED
-from ...tests.decorators import set_sampling_params_iftrue, set_seed_iftrue
+from ...tests.decorators import set_seed_iftrue
 from ...algorithms.sqrt_lasso import choose_lambda, solve_sqrt_lasso
 from ..randomization import randomization
 from ...tests.decorators import rpy_test_safe

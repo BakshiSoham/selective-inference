@@ -5,7 +5,7 @@ from scipy.stats import norm as ndist
 import nose.tools as nt
 
 from ..lasso import lasso, full_targets
-from ...tests.instance import gaussian_instance
+
 
 def test_onedim_lasso(n=50000, W=1.5, signal=2., sigma=1, randomizer_scale=1):
 

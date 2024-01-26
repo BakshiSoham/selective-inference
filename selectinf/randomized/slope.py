@@ -1,6 +1,5 @@
 from __future__ import print_function
 
-import functools
 import numpy as np
 
 # sklearn imports
@@ -17,12 +16,10 @@ except ImportError:
 from regreg.atoms.slope import _basic_proximal_map
 import regreg.api as rr
 
-from ..constraints.affine import constraints
-
 from .randomization import randomization
 from ..base import restricted_estimator
 from .query import gaussian_query
-from .lasso import lasso
+
 
 class slope(gaussian_query):
 

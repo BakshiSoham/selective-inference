@@ -1,24 +1,17 @@
 from __future__ import division, print_function
 
 import numpy as np
-import nose.tools as nt
 
 from scipy.stats import norm as ndist
 
-import regreg.api as rr
-
-from ..lasso import (split_lasso, 
+from ..lasso import (split_lasso,
                      selected_targets, 
                      full_targets, 
                      debiased_targets)
 from ...tests.instance import gaussian_instance
-from ...tests.flags import SET_SEED
-from ...tests.decorators import set_sampling_params_iftrue, set_seed_iftrue
-from ...algorithms.sqrt_lasso import choose_lambda, solve_sqrt_lasso
-from ..randomization import randomization
-from ...tests.decorators import rpy_test_safe
 
-def test_split_lasso(n=100, 
+
+def test_split_lasso(n=100,
                      p=200, 
                      signal_fac=3, 
                      s=5, 

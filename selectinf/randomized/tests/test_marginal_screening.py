@@ -1,5 +1,4 @@
 import numpy as np
-from scipy.stats import norm as ndist
 
 from ...tests.instance import gaussian_instance
 from ..screening import marginal_screening
